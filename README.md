@@ -14,6 +14,7 @@ npm install
 ```
 
 ## Run the application
+#### Make sure to include the .env file in the root folder before running the application
 
 ```
 npm start
