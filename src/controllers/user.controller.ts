@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {inject} from '@loopback/core';
 import {repository} from '@loopback/repository';
 import {
@@ -146,8 +147,8 @@ export class UserController {
       to: existingUser.email,
       from: 'edmatthewsantos@gmail.com',
       subject: 'Password Reset Request',
-      text: resetToken,
-      html: `<strong>${resetToken}</strong>`,
+      text: hash,
+      html: `<strong>${hash}</strong>`,
     };
     sendgridMail
       .send(emailRequest)
